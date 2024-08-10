@@ -80,4 +80,29 @@ function spinWheel() {
     const spinAngle = 10 * (Math.random() * 360 + 720); // 720 degrees + random
     const startTime = performance.now();
 
-    function
+    function animate(time) {
+        const elapsed = time - startTime;
+        if (elapsed < spinDuration) {
+            angle += spinAngle / (spinDuration / 16);
+            ctx.clearRect(0, 0, canvas.width, canvas.height);
+            drawWheel();
+            requestAnimationFrame(animate);
+        } else {
+            const winningIndex = (randomIndex + Math.floor(angle / (2 * Math.PI / options.length))) % options.length;
+            showResult(options[winningIndex]);
+        }
+    }
+    requestAnimationFrame(animate);
+}
+
+function showResult(option) {
+    resultText.textContent = `YOUR TOPIC IS: ${option}`;
+    resultPopup.classList.remove('hidden');
+}
+
+spinButton.addEventListener('click', spinWheel);
+closePopup.addEventListener('click', () => {
+    resultPopup.classList.add('hidden');
+});
+
+drawWheel();
