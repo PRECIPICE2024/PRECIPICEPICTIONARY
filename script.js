@@ -65,7 +65,7 @@ function spinWheel() {
 }
 
 function showResult(option) {
-    resultText.textContent = `YOUR COUNTRY IS: ${option}`;
+resultText.innerHTML = `Your country is: <strong>${option}</strong>`;
     resultPopup.classList.remove('hidden');
 }
 
