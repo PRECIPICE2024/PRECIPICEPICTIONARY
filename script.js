@@ -2,7 +2,7 @@ const options = [
     "Italy", "Iceland", "Argentina", "Spain", "France",
     "New York", "Singapore", "Australia", "South Korea", "Turkey",
     "Brazil", "United Kingdom", "Canada", "Egypt", "Mexico",
-    "Option 16", "Option 17", "Option 18", "Option 19", "Option 20"
+    "Chile", "Cuba", "Japan", "Jordan", "Switzerland"
 ];
 
 const canvas = document.getElementById('wheel');
