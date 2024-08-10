@@ -13,6 +13,7 @@ h1 {
     justify-content: center;
     font-size: 36px;
     margin: 20px 0;
+    color: gold; /* Set header text color to gold */
 }
 
 #header-image {
