@@ -3,13 +3,16 @@ body {
     color: white;
     font-family: 'Montserrat', sans-serif;
     text-align: center;
+    margin: 0;
+    padding: 0;
 }
 
 h1 {
     display: flex;
     align-items: center;
     justify-content: center;
-    font-size: 48px;
+    font-size: 36px;
+    margin: 20px 0;
 }
 
 #header-image {
@@ -18,22 +21,29 @@ h1 {
 }
 
 #wheel-container {
+    width: 80%;
+    max-width: 400px;
     margin: 20px auto;
 }
 
+canvas {
+    width: 100%;
+    height: auto;
+}
+
 #spin-button {
-    padding: 20px 40px; /* Increased padding for a larger button */
-    font-size: 24px; /* Increased font size */
+    padding: 15px 30px;
+    font-size: 20px;
     cursor: pointer;
-    background-color: #444; /* Dark background for the button */
-    color: white; /* White text color */
-    border: none; /* Remove default border */
-    border-radius: 10px; /* Rounded corners */
-    margin-top: 20px; /* Space above the button */
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    margin-top: 20px;
 }
 
 #spin-button:hover {
-    background-color: #666; /* Lighter background on hover */
+    background-color: #666;
 }
 
 #result-popup {
@@ -46,8 +56,21 @@ h1 {
     padding: 20px;
     border-radius: 10px;
     z-index: 10;
+    width: 80%;
+    max-width: 400px;
 }
 
 .hidden {
     display: none;
+}
+
+@media (max-width: 480px) {
+    h1 {
+        font-size: 24px;
+    }
+
+    #spin-button {
+        padding: 10px 20px;
+        font-size: 16px;
+    }
 }
